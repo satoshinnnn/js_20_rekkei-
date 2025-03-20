@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let username = "shinchan";
+      let password = "123";
+      
+      let inputUsername;
+      let inputPassword;
+ 
+      let maxInput = 2;        
+      let isLoggined = false;
+        
+      for(let i = 1; i <= maxInput; i++) {
+
+        inputUsername = prompt("Mời bạn nhập vào username");
+        inputPassword = prompt("Mời bạn nhập vào mật khẩu");
+
+        if (username === inputUsername && password === inputPassword) {
+            console.log("Đăng nhập tài khoản thành công");
+            isLoggined = true;
+            break;
+        } else {         
+            let remain = maxInput -i;
+
+            if (inputUsername == null || inputPassword == null) {
+                console.log("Bạn chưa nhập đủ thông tin. Hãy thử lại!");
+                i--; 
+                continue;
+            } else if (remain > 0) {
+                console.log("Tên đăng nhập hoặc mật khẩu sai");
+                console.log(`Bạn chỉ có tối đa ${maxInput} lần đăng nhập, bây giờ bạn còn ${remain} lần đăng nhập`);
+            } else {
+                console.log("Bạn đã hết số lần đăng nhập");
+            }
+            }
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Mời bạn nhập vào một số dương");
+        if (isNaN(n) || n <= 0 || !Number.isInteger(n)) {
+            alert("Giá trị đầu vào không hợp lệ! Vui lòng nhập một số nguyên dương.");
+        }else {
+            for (let i = 1 ; i <= n ; i++) {
+                if (i % 5 === 0) {
+                    console.log(i);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Mời bạn nhập vào một số dương");
+        if (isNaN(n) || n <= 0 || !Number.isInteger(n)) {
+            alert("Giá trị đầu vào không hợp lệ! Vui lòng nhập một số nguyên dương.");
+        }else {
+            let i = 1;
+            sum = 0;
+            for (i ; i <= n ; i++) {
+                sum+=i;
+            }
+        alert(sum);
+        }
+    </script>
+</body>
+</html>
